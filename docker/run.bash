@@ -38,6 +38,7 @@ fi
 if [ ${OS_TYPE} != "Mac" ]
 then
 docker run -v ${MY_TOP_DIR}:/root/workspace/tutorial \
+	-v ${MY_TOP_DIR}/mariadb-data:/var/lib/mysql \
 	-it --rm \
 	--net host \
 	-e CORE_IPADDR=${IPADDR} \
@@ -45,6 +46,7 @@ docker run -v ${MY_TOP_DIR}:/root/workspace/tutorial \
 	--name tutorial ${DOCKER_IMAGE} 
 else
 docker run -v ${MY_TOP_DIR}:/root/workspace/tutorial \
+	-v ${MY_TOP_DIR}/mariadb-data:/var/lib/mysql \
 	-it --rm \
 	--ip ${IPADDR} -p 10000:10000 \
 	-e CORE_IPADDR=${IPADDR} \
