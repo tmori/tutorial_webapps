@@ -45,6 +45,14 @@ Bye
 
 ## update nginx.conf(see: env/nginx/nginx.conf)
 ## cp env/nginx/nginx.conf /etc/nginx/conf.d/
+## comment out sites-enabled
+```
+$ diff nginx.conf nginx.conf.bak 
+62c62
+< 	#include /etc/nginx/sites-enabled/*;
+---
+> 	include /etc/nginx/sites-enabled/*;
+```
 
 ## refs nginx php settings https://mat0401.info/blog/ubuntu-nginx-php/
 
