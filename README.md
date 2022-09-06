@@ -1,10 +1,8 @@
 # tutorial_webapps
 
-#############################
-# web db server: exment && mariadb latest(10.3.34)
-# chat tool: mattermost && postgresql
-# monitor tool: zabbix agent
-#############################
+- web db server: exment && mariadb latest(10.3.34)
+- chat tool: mattermost && postgresql
+- monitor tool: zabbix agent
 
 
 refs: https://exment.net/docs/#/ja/quickstart
